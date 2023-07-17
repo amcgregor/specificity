@@ -34,6 +34,7 @@
 	figure { width: 19vw; min-width: 200px; max-width: 200px; position: relative; margin: 0 2vw calc(15px + 1em); padding: 0; }
 	figure img { border: 1px solid black; }
 	figure figcaption { position: absolute; left: -4px; top: -4px; padding: 5px; background: black; color: white; font-size: 12px; font-weight: bold; box-shadow: -1px -1px 0 white, -2px -2px 0 black; line-height: 1; }
+	figure figcaption.multiline { top: -12px; }
 	figure samp { font-size: 11px; float: left; }
 	figure samp + samp { float: right; }
 	
@@ -144,7 +145,7 @@
 		
 		<figure>
 			<img src=img/elements-attribute.svg alt="">
-			<figcaption clas=multiline>2 elements<br>1 attribute</figcaption>
+			<figcaption class=multiline>2 elements<br>1 attribute</figcaption>
 			<samp>form input[type=email]</samp>
 			<samp>0–1–2</samp>
 		</figure>
