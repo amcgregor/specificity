@@ -7,8 +7,8 @@
 <meta name=description content="CSS Specificity. CSS specificity assigns a numerical representation of a selector in order to compare in case there are style conflicts. This presents CSS specificity with icons from Stanley Kubrick's &quot;The Shining&quot; film.">
 <!--<link rel=stylesheet href=/styles/styles.css>-->
 <style>
-	body { font-family: Helvetica, sans-serif; }
-	article { max-width: 80vw; margin: 0 auto; border: 1px solid green; }
+	html, body { font-family: Helvetica, sans-serif; margin: 0; padding: 0; }
+	article { }
 	
 	h1 { margin: 10px 0 20px 5px; font-weight: bold; font-size: 48px; line-height: 0.7; text-indent: 30px; }
 	h1:first-line { font-size: 40px; }
@@ -25,7 +25,7 @@
 	#selectors { display: flex; align-items: center; flex-wrap: wrap; justify-content: center; }
 	#selectors figure { flex 0 0; }
 	
-	figure { width: 25%; position: relative; margin: 15px 15px calc(15px + 1em); padding: 0; }
+	figure { width: 19vw; position: relative; margin: 0 2vw calc(15px + 1em); padding: 0; }
 	figure img { border: 1px solid black; }
 	figure figcaption { position: absolute; left: -4px; top: -4px; padding: 5px; background: black; color: white; font-size: 12px; font-weight: bold; box-shadow: -1px -1px 0 white, -2px -2px 0 black; line-height: 1; }
 	figure samp { font-size: 11px; float: left; }
@@ -78,6 +78,13 @@
 			<figcaption>2 elements</figcaption>
 			<samp>section &gt; p</samp>
 			<samp>0–0–2</samp>
+		</figure>
+		
+		<figure>
+			<img src=img/element-many.svg alt="9 elements">
+			<figcaption>9 elements</figcaption>
+			<samp>body … section p</samp>
+			<samp>0–0–9</samp>
 		</figure>
 	</section>
 	
