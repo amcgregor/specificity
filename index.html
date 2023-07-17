@@ -10,22 +10,26 @@
 	body { font-family: Helvetica, sans-serif; }
 	article { max-width: 80vw; margin: 0 auto; border: 1px solid green; }
 	
+	h3 { display: inline-block; font-size: 11px; margin: 0 calc(-1ex + 2px); background-color: #cbc9c7; padding: 3px 5px; box-shadow: -1px -1px 0 white, -2px -2px 0 #d0cecd; }
+	
 	header { display: flex; }
 	header > * { flex: 1; }
 	header h1 { flex: 1 0; }
 	header p { justify-content: end; flex: 0 1; min-width: fit-content; }
 	
 	footer { font-size: 10px; }
-	footer > section { max-width: 33vw; }
+	footer > section { max-width: 50%; padding: 0 1em; }
+	footer > section:first-child { padding-left: 1em; }
 	footer:first-of-type { display: flex; justify-content: center; }
 	footer.colophon { text-align: center; }
 	footer a { font-weight: bold; color: inherit; text-decoration: none; }
 	footer a:hover, footer a:focus { color: black; text-decoration: underline; }
 	footer + footer { color: #cbc9c7; }
+	footer dl { margin: 0; margin-top: 1em; padding: 0; }
 	footer dl div { display: flex; }
-	footer dt { flex: 0 1; min-width: 4em; text-align: right; }
+	footer dt { flex: 0 1; min-width: 6em; text-align: right; }
+	footer dt samp { font-family: monospace; display: inline-block; border: 1px solid rgba(127, 127, 127, 0.5); border-radius: 3px; padding: 0.5ex 1ex; margin-bottom: 1ex; }
 	footer dd { flex: 1 0; margin: 0; margin-left: 1em; }
-	footer div + div { margin-top: 1ex; }
 	
 	.colophon ul { list-style: none; }
 	.colophon li { display: inline; }
@@ -52,23 +56,23 @@
 			<h3>Legend</h3>
 			<dl>
 				<div>
-					<dt>x-0-0
+					<dt><samp>x-0-0</samp>
 					<dd>The number of <strong>ID selectors</strong>
 				</div>
 				<div>
-					<dt>0-x-0
+					<dt><samp>0-x-0</samp>
 					<dd>The number of <strong>class and attribute</strong>, and <strong>pseudo-selectors</strong>
 				</div>
 				<div>
-					<dt>0-0-x
+					<dt><samp>0-0-x</samp>
 					<dd>The number of <strong>type</strong> and <strong>pseudo-elements</strong>
 				</div>
 				<div>
-					<dt>*, +, &gt;, ~
+					<dt><samp>*</samp> <samp>+</samp> <samp>&gt;</samp> <samp>~</samp>
 					<dd>The <strong>universal selector</strong> has no value. When combined with other selectors, they do not increase specificity.
 				</div>
 				<div>
-					<dt>:not(x)
+					<dt><samp>:not(x)</samp>
 					<dd>The <strong>negation selector</strong> has no value, but the argument passed increases specificity
 				</div>
 			</ul>
@@ -79,7 +83,7 @@
 			<li>Illustrations by <a href="https://twitter.com/@ericajdesign">Erica Jacobs</a></li>
 			<li>Design by <a href="https://twitter.com/@ari4nne">Ari Stiles</a> &amp; <a href="https://twitter.com/@teleject">Christopher Schmitt</a></li>
 			<li>Printed at <a href="https://twitter.com/@skylabltrpress">Skylab Letterpress</a></li>
-			<li>From a Specificity Outlined by <a href="https://web.archive.org/web/20220318101613/http://twitter.com/@estellevw">Estelle Weyl</a></li>
+			<li>From a Specificity Outlined by <a href="https://twitter.com/@estellevw">Estelle Weyl</a></li>
 			<li><a href="">CSS Dev Conference</a>
 		</ul>
 	</footer>
