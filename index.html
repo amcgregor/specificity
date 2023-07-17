@@ -22,9 +22,14 @@
 	header img { justify-content: end; flex: 0 1; }
 	header p { justify-content: end; flex: 0 1; padding: 1em; min-width: fit-content; }
 	
-	figure { max-width: 25%; position: relative; margin: 15px; padding: 0; box-sizing: border-box; }
+	#selectors { display: flex; position: relative; }
+	#selectors figure { flex 0 0; }
+	
+	figure { width: 25%; position: relative; margin: 15px 15px calc(15px + 1em); padding: 0; box-sizing: border-box; }
 	figure img { border: 1px solid black; }
-	figure figcaption { position: absolute; left: -4px; top: -4px; padding: 5px; background: black; color: white; font-size: 12px; font-weight: bold; box-shadow: -1px -1px 0 white, -2px -2px 0 black; }
+	figure figcaption { position: absolute; left: -4px; top: -4px; padding: 5px; background: black; color: white; font-size: 12px; font-weight: bold; box-shadow: -1px -1px 0 white, -2px -2px 0 black; line-height: 1; }
+	figure samp { font-size: 11px; float: left; }
+	figure samp + samp { float: right; }
 	
 	footer { font-size: 10px; }
 	footer > section { max-width: 50%; padding: 0 1em; }
@@ -53,10 +58,19 @@
 		<p>with icons inspired<br>by "The Shining"</p>
 	</header>
 	
-	<section>
+	<section id=selectors>
 		<figure>
 			<img src=img/universal.svg alt="universal selector">
 			<figcaption>universal selector</figcaption>
+			<samp>*</samp>
+			<samp>0–0–0</samp>
+		</figure>
+		
+		<figure>
+			<img src=img/element-single.svg alt="1 element">
+			<figcaption>1 element</figcaption>
+			<samp>section</samp>
+			<samp>0–0–1</samp>
 		</figure>
 	</section>
 	
@@ -108,19 +122,6 @@
 
 <article hidden>
 		<div class="container">
-			<div class="box">
-				<div class="frame">
-					<a href="#">
-						<div class="img">
-							<div class="mask"></div>
-						</div>
-						<div class="desc">
-							<span class="value">0 - 0 - 0</span>
-							<p><img src="/web/20220318101613im_/https://cssspecificity.com/images/ico-01.png" alt=""></p>
-						</div>
-					</a>
-				</div><!-- frame -->
-			</div><!-- box -->
 			<div class="box">
 				<div class="frame">
 					<a href="#">
