@@ -22,6 +22,10 @@
 	header img { justify-content: end; flex: 0 1; }
 	header p { justify-content: end; flex: 0 1; padding: 1em; min-width: fit-content; }
 	
+	figure { max-width: 25%; position: relative; margin: 15px; padding: 0; box-sizing: border-box; }
+	figure img { border: 1px solid black; }
+	figure figcaption { position: absolute; left: -4px; top: -4px; padding: 5px; background: black; color: white; font-size: 12px; font-weight: bold; box-shadow: -1px -1px 0 white, -2px -2px 0 black; }
+	
 	footer { font-size: 10px; }
 	footer > section { max-width: 50%; padding: 0 1em; }
 	footer > section:first-child { padding-left: 1em; }
@@ -49,7 +53,7 @@
 		<p>with icons inspired<br>by "The Shining"</p>
 	</header>
 	
-	<section hidden>
+	<section>
 		<figure>
 			<img src=img/universal.svg alt="universal selector">
 			<figcaption>universal selector</figcaption>
