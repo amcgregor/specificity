@@ -10,6 +10,9 @@
 	body { font-family: Helvetica, sans-serif; }
 	article { max-width: 80vw; margin: 0 auto; border: 1px solid green; }
 	
+	h1 { margin: 10px 0 20px 5px; font-weight: bold; font-size: 48px; line-height: 0.7; text-indent: 30px; }
+	h1:first-line { font-size: 40px; }
+	h1 a { text-decoration: none; color: #333; }
 	h3 { display: inline-block; font-size: 11px; margin: 0 calc(-1ex + 2px); background-color: #cbc9c7; padding: 3px 5px; box-shadow: -1px -1px 0 white, -2px -2px 0 #d0cecd; }
 	
 	header { display: flex; }
@@ -39,7 +42,7 @@
 
 <article>
 	<header>
-		<h1><a href="/">CSS Specificity</a></h1>
+		<h1><a href="/">CSS<br>Specificity</a></h1>
 		<p>with icons inspired by "The Shining"</p>
 	</header>
 	
@@ -49,9 +52,9 @@
 	<footer>
 		<section id=about>
 			<h3>About</h3>
-			<p>The origin and sorting order of CSS helps browsers to determine which rules win out over others.</p>
-			<p>When one of those methods completely fails, there is a conflict as to which CSS rule should be applied. CSS has in place a way to deal with those conflicts: the specificity of the CSS selector.</p>
-			<p>The higher the specificity of a CSS selector, the greater the likelihood its declarations are used over another CSS rule's declarations.</p>
+			<p>The origin and sorting order of CSS helps browsers to determine which rules win out over others.
+			<p>When one of those methods completely fails, there is a conflict as to which CSS rule should be applied. CSS has in place a way to deal with those conflicts: the specificity of the CSS selector.
+			<p>The higher the specificity of a CSS selector, the greater the likelihood its declarations are used over another CSS rule's declarations.
 		</section>
 		<section id=legend>
 			<h3>Legend</h3>
