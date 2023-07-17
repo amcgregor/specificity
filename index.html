@@ -21,7 +21,6 @@
 	footer > section { max-width: 50%; padding: 0 1em; }
 	footer > section:first-child { padding-left: 1em; }
 	footer:first-of-type { display: flex; justify-content: center; }
-	footer.colophon { text-align: center; }
 	footer a { font-weight: bold; color: inherit; text-decoration: none; }
 	footer a:hover, footer a:focus { color: black; text-decoration: underline; }
 	footer + footer { color: #cbc9c7; }
@@ -29,11 +28,13 @@
 	footer dl div { display: flex; }
 	footer dt { flex: 0 1; min-width: 6em; text-align: right; }
 	footer dt samp { font-family: monospace; display: inline-block; border: 1px solid rgba(127, 127, 127, 0.5); border-radius: 3px; padding: 0.5ex 1ex; margin-bottom: 1ex; }
-	footer dd { flex: 1 0; margin: 0; margin-left: 1em; }
+	footer dd { flex: 1 0; margin: 0; margin-left: 1em; line-height: 1.4; padding-top: 3px; }
 	
-	.colophon ul { list-style: none; }
-	.colophon li { display: inline; }
-	.colophon li + li:before { content: '· '; }
+	#colophon { text-align: center; }
+	#colophon ul { list-style: none; }
+	#colophon li { display: inline; }
+	#colophon li + li:before { content: '· '; }
+	#colophon br + li:before { content: none; }
 </style>
 
 <article>
@@ -46,13 +47,13 @@
 	</section>
 	
 	<footer>
-		<section class="about">
+		<section id=about>
 			<h3>About</h3>
 			<p>The origin and sorting order of CSS helps browsers to determine which rules win out over others.</p>
 			<p>When one of those methods completely fails, there is a conflict as to which CSS rule should be applied. CSS has in place a way to deal with those conflicts: the specificity of the CSS selector.</p>
 			<p>The higher the specificity of a CSS selector, the greater the likelihood its declarations are used over another CSS rule's declarations.</p>
 		</section>
-		<section class="legend">
+		<section id=legend>
 			<h3>Legend</h3>
 			<dl>
 				<div>
@@ -78,13 +79,15 @@
 			</ul>
 		</section>
 	</footer>
-	<footer class=colophon>
+	<footer id=colophon>
 		<ul>
-			<li>Illustrations by <a href="https://twitter.com/@ericajdesign">Erica Jacobs</a></li>
-			<li>Design by <a href="https://twitter.com/@ari4nne">Ari Stiles</a> &amp; <a href="https://twitter.com/@teleject">Christopher Schmitt</a></li>
+			<li>Illustrations by <a href="https://twitter.com/@ericajdesign">Erica Jacobs</a>
+			<li>Design by <a href="https://twitter.com/@ari4nne">Ari Stiles</a> &amp; <a href="https://twitter.com/@teleject">Christopher Schmitt</a>
 			<li>Printed at <a href="https://twitter.com/@skylabltrpress">Skylab Letterpress</a></li>
-			<li>From a Specificity Outlined by <a href="https://twitter.com/@estellevw">Estelle Weyl</a></li>
-			<li><a href="">CSS Dev Conference</a>
+			<br>
+			<li>Preserved by <a href="https://web.archive.org/web/20220318101613/https://cssspecificity.com/#">Archive.org</a>
+			<li>Modernized by <a href="https://marrow.haus/@alice">Alice Bevan-McGregor</a>
+			<li>From a Specificity Outlined by <a href="https://twitter.com/@estellevw">Estelle Weyl</a>
 		</ul>
 	</footer>
 </article>
