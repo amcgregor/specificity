@@ -31,7 +31,7 @@
 	#selectors figure { flex 0 0; }
 	#selectors h3 { display: inline-block; font-size: 11px; margin: 0 calc(-1ex + 2px); background-color: #cbc9c7; padding: 3px 5px; box-shadow: -1px -1px 0 white, -2px -2px 0 #d0cecd; }
 	
-	figure { width: 19vw; min-width: 150px; max-width: 200px; position: relative; margin: 0 2vw calc(15px + 1em); padding: 0; }
+	figure { width: 19vw; min-width: 200px; max-width: 200px; position: relative; margin: 0 2vw calc(15px + 1em); padding: 0; }
 	figure img { border: 1px solid black; }
 	figure figcaption { position: absolute; left: -4px; top: -4px; padding: 5px; background: black; color: white; font-size: 12px; font-weight: bold; box-shadow: -1px -1px 0 white, -2px -2px 0 black; line-height: 1; }
 	figure samp { font-size: 11px; float: left; }
@@ -119,6 +119,43 @@
 			<figcaption>1 pseudo-class</figcaption>
 			<samp>:only-of-type</samp>
 			<samp>0–1–0</samp>
+		</figure>
+		
+		<figure>
+			<img src=img/element-class.svg alt="1 element, 1 clacss">
+			<figcaption class=multiline>1 element<br>1 class</figcaption>
+			<samp>li.myclass</samp>
+			<samp>0–1–1</samp>
+		</figure>
+		
+		<figure>
+			<img src=img/element-attribute.svg alt="1 element, 1 attribute">
+			<figcaption class=multiline>1 element<br>1 attribute</figcaption>
+			<samp>li[attr]</samp>
+			<samp>0–1–1</samp>
+		</figure>
+		
+		<figure>
+			<img src=img/elements-pseudo.svg alt="2 elements, 1 pseudo-class">
+			<figcaption class=multiline>2 elements<br>1 pseudo-class</figcaption>
+			<samp>li:nth-of-type(3n)~li</samp>
+			<samp>0–1–2</samp>
+		</figure>
+		
+		<figure>
+			<img src=img/elements-attribute.svg alt="">
+			<figcaption clas=multiline>2 elements<br>1 attribute</figcaption>
+			<samp>form input[type=email]</samp>
+			<samp>0–1–2</samp>
+		</figure>
+		
+		
+		
+		<figure hidden>
+			<img src=img/.svg alt="">
+			<figcaption></figcaption>
+			<samp></samp>
+			<samp>0–0–0</samp>
 		</figure>
 	</section>
 	
