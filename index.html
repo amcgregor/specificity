@@ -13,12 +13,14 @@
 	h1 { margin: 10px 0 20px 5px; font-weight: bold; font-size: 48px; line-height: 0.7; text-indent: 30px; }
 	h1:first-line { font-size: 40px; }
 	h1 a { text-decoration: none; color: #333; }
+	h1 a:hover, h1 a:focus { color: black; }
 	h3 { display: inline-block; font-size: 11px; margin: 0 calc(-1ex + 2px); background-color: #cbc9c7; padding: 3px 5px; box-shadow: -1px -1px 0 white, -2px -2px 0 #d0cecd; }
 	
-	header { display: flex; }
+	header { display: flex; align-items: center; justify-content: center; }
 	header > * { flex: 1; }
-	header h1 { flex: 1 0; }
-	header p { justify-content: end; flex: 0 1; min-width: fit-content; }
+	header h1 { flex: 1 0; padding: 1ex; }
+	header img { justify-content: end; flex: 0 1; }
+	header p { justify-content: end; flex: 0 1; padding: 1em; min-width: fit-content; }
 	
 	footer { font-size: 10px; }
 	footer > section { max-width: 50%; padding: 0 1em; }
@@ -43,10 +45,15 @@
 <article>
 	<header>
 		<h1><a href="/">CSS<br>Specificity</a></h1>
-		<p>with icons inspired by "The Shining"</p>
+		<img src=img/typewriter.svg height=100>
+		<p>with icons inspired<br>by "The Shining"</p>
 	</header>
 	
-	<section>
+	<section hidden>
+		<figure>
+			<img src=img/universal.svg alt="universal selector">
+			<figcaption>universal selector</figcaption>
+		</figure>
 	</section>
 	
 	<footer>
@@ -88,7 +95,7 @@
 			<li>Design by <a href="https://twitter.com/@ari4nne">Ari Stiles</a> &amp; <a href="https://twitter.com/@teleject">Christopher Schmitt</a>
 			<li>Printed at <a href="https://twitter.com/@skylabltrpress">Skylab Letterpress</a></li>
 			<br>
-			<li>Preserved by <a href="https://web.archive.org/web/20220318101613/https://cssspecificity.com/#">Archive.org</a>
+			<li>Preserved by <a href="https://web.archive.org/web/20220318101613/https://cssspecificity.com/">Archive.org</a>
 			<li>Modernized by <a href="https://marrow.haus/@alice">Alice Bevan-McGregor</a>
 			<li>From a Specificity Outlined by <a href="https://twitter.com/@estellevw">Estelle Weyl</a>
 		</ul>
@@ -96,28 +103,11 @@
 </article>
 
 <article hidden>
-	<div id="wrapper">
-		<header>
-			<strong class="logo"><a href="https://web.archive.org/web/20220318101613/http://cssspecificity.com/">CSS Specificity</a></strong>
-			<div class="block">
-				<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-01.svg" alt="">
-				<div class="box">
-					<strong>with icons inspired by "The Shining"</strong>
-					<a href="https://web.archive.org/web/20220318101613/http://cssspecificity.com/">cssspecificity.com</a>
-				</div>
-			</div><!-- block -->
-		</header><!-- header -->
 		<div class="container">
 			<div class="box">
 				<div class="frame">
 					<a href="#">
 						<div class="img">
-							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-02.svg" alt="">
-							<div class="ttl">
-								<ul>
-									<li>universal selector</li>
-								</ul>
-							</div>
 							<div class="mask"></div>
 						</div>
 						<div class="desc">
