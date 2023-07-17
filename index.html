@@ -7,8 +7,8 @@
 <meta name=description content="CSS Specificity. CSS specificity assigns a numerical representation of a selector in order to compare in case there are style conflicts. This presents CSS specificity with icons from Stanley Kubrick's &quot;The Shining&quot; film.">
 
 <style>
-	html, body { font-family: Helvetica, sans-serif; margin: 0; padding: 0; }
-	article { }
+	html, body { font-family: Helvetica, sans-serif; margin: 0; padding: 0; background-color: white; color: black; }
+	
 	a { font-weight: bold; color: inherit; text-decoration: none; }
 	a:hover, footer a:focus { color: black; text-decoration: underline; }
 	
@@ -56,6 +56,14 @@
 	#colophon li { display: inline; }
 	#colophon li + li:before { content: '· '; }
 	#colophon br + li:before { content: none; }
+	
+	@media (prefers-color-scheme: dark) {
+		html, body { background-color: #333; color: #eee; }
+		a:hover { color: white; }
+		h1 a { color: #ddd; }
+		h1 a:hover, h1 a:focus { color: white; }
+		h3 { background-color: black; box-shadow: -1px -1px 0 #333, -2px -2px 0 black; }
+	}
 </style>
 
 <article>
