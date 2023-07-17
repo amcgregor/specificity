@@ -22,7 +22,7 @@
 	header img { justify-content: end; flex: 0 1; }
 	header p { justify-content: end; flex: 0 1; padding: 1em; min-width: fit-content; }
 	
-	#selectors { display: flex; position: relative; }
+	#selectors { display: flex; justify-content: center; }
 	#selectors figure { flex 0 0; }
 	
 	figure { width: 25%; position: relative; margin: 15px 15px calc(15px + 1em); padding: 0; box-sizing: border-box; }
@@ -71,6 +71,13 @@
 			<figcaption>1 element</figcaption>
 			<samp>section</samp>
 			<samp>0–0–1</samp>
+		</figure>
+		
+		<figure>
+			<img src=img/element-multiple.svg alt="2 elements">
+			<figcaption>2 elements</figcaption>
+			<samp>section &gt; p</samp>
+			<samp>0–0–2</samp>
 		</figure>
 	</section>
 	
