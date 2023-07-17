@@ -19,8 +19,8 @@
 	header { display: flex; align-items: center; justify-content: center; }
 	header > * { flex: 1; }
 	header h1 { flex: 1 0; padding: 1ex; }
-	header img { justify-content: end; flex: 0 1; }
-	header p { justify-content: end; flex: 0 1; padding: 1em; min-width: fit-content; }
+	header img { justify-content: end; flex: 0 1; font-size: 48px; margin: 0 1ex 0 0.5ex; }
+	header p { justify-content: end; flex: 0 1; padding: 1em; min-width: fit-content; text-align: right; }
 	
 	#selectors { display: flex; align-items: center; flex-wrap: wrap; justify-content: center; }
 	#selectors figure { flex 0 0; }
@@ -57,8 +57,8 @@
 <article>
 	<header>
 		<h1><a href="/">CSS<br>Specificity</a></h1>
-		<img src=img/typewriter.svg height=100>
 		<p>with icons inspired<br>by "The Shining"</p>
+		<img src=img/typewriter.svg height=100>
 	</header>
 	
 	<section id=selectors>
