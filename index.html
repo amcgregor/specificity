@@ -1,0 +1,500 @@
+<!DOCTYPE html><html lang=en>
+<title>Stanley Kubrick's CSS Specificity</title>
+<meta charset=utf-8>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="CSS Specificity, css, css3, css selector, css attribute selector, css ID selector, css pseudo selector, css universal selector, css negation selector, css selectors cheat sheet, css adjacent selector">
+<meta name=description content="CSS Specificity. CSS specificity assigns a numerical representation of a selector in order to compare in case there are style conflicts. This presents CSS specificity with icons from Stanley Kubrick's &quot;The Shining&quot; film.">
+<!--<link rel=stylesheet href=/styles/styles.css>-->
+<style>
+	body { font-family: Helvetica, sans-serif; }
+	article { max-width: 80vw; margin: 0 auto; border: 1px solid green; }
+	
+	header { display: flex; }
+	header > * { flex: 1; }
+	header h1 { flex: 1 0; }
+	header p { justify-content: end; flex: 0 1; min-width: fit-content; }
+	
+	footer { font-size: 10px; }
+	footer > section { max-width: 33vw; }
+	footer:first-of-type { display: flex; justify-content: center; }
+	footer.colophon { text-align: center; }
+	footer a { font-weight: bold; color: inherit; text-decoration: none; }
+	footer a:hover, footer a:focus { color: black; text-decoration: underline; }
+	footer + footer { color: #cbc9c7; }
+	footer dl div { display: flex; }
+	footer dt { flex: 0 1; min-width: 4em; text-align: right; }
+	footer dd { flex: 1 0; margin: 0; margin-left: 1em; }
+	footer div + div { margin-top: 1ex; }
+	
+	.colophon ul { list-style: none; }
+	.colophon li { display: inline; }
+	.colophon li + li:before { content: '· '; }
+</style>
+
+<article>
+	<header>
+		<h1><a href="/">CSS Specificity</a></h1>
+		<p>with icons inspired by "The Shining"</p>
+	</header>
+	
+	<section>
+	</section>
+	
+	<footer>
+		<section class="about">
+			<h3>About</h3>
+			<p>The origin and sorting order of CSS helps browsers to determine which rules win out over others.</p>
+			<p>When one of those methods completely fails, there is a conflict as to which CSS rule should be applied. CSS has in place a way to deal with those conflicts: the specificity of the CSS selector.</p>
+			<p>The higher the specificity of a CSS selector, the greater the likelihood its declarations are used over another CSS rule's declarations.</p>
+		</section>
+		<section class="legend">
+			<h3>Legend</h3>
+			<dl>
+				<div>
+					<dt>x-0-0
+					<dd>The number of <strong>ID selectors</strong>
+				</div>
+				<div>
+					<dt>0-x-0
+					<dd>The number of <strong>class and attribute</strong>, and <strong>pseudo-selectors</strong>
+				</div>
+				<div>
+					<dt>0-0-x
+					<dd>The number of <strong>type</strong> and <strong>pseudo-elements</strong>
+				</div>
+				<div>
+					<dt>*, +, &gt;, ~
+					<dd>The <strong>universal selector</strong> has no value. When combined with other selectors, they do not increase specificity.
+				</div>
+				<div>
+					<dt>:not(x)
+					<dd>The <strong>negation selector</strong> has no value, but the argument passed increases specificity
+				</div>
+			</ul>
+		</section>
+	</footer>
+	<footer class=colophon>
+		<ul>
+			<li>Illustrations by <a href="https://twitter.com/@ericajdesign">Erica Jacobs</a></li>
+			<li>Design by <a href="https://twitter.com/@ari4nne">Ari Stiles</a> &amp; <a href="https://twitter.com/@teleject">Christopher Schmitt</a></li>
+			<li>Printed at <a href="https://twitter.com/@skylabltrpress">Skylab Letterpress</a></li>
+			<li>From a Specificity Outlined by <a href="https://web.archive.org/web/20220318101613/http://twitter.com/@estellevw">Estelle Weyl</a></li>
+			<li><a href="">CSS Dev Conference</a>
+		</ul>
+	</footer>
+</article>
+
+<article hidden>
+	<div id="wrapper">
+		<header>
+			<strong class="logo"><a href="https://web.archive.org/web/20220318101613/http://cssspecificity.com/">CSS Specificity</a></strong>
+			<div class="block">
+				<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-01.svg" alt="">
+				<div class="box">
+					<strong>with icons inspired by "The Shining"</strong>
+					<a href="https://web.archive.org/web/20220318101613/http://cssspecificity.com/">cssspecificity.com</a>
+				</div>
+			</div><!-- block -->
+		</header><!-- header -->
+		<div class="container">
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-02.svg" alt="">
+							<div class="ttl">
+								<ul>
+									<li>universal selector</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 0 - 0</span>
+							<p><img src="/web/20220318101613im_/https://cssspecificity.com/images/ico-01.png" alt=""></p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-03.svg" alt="">
+							<div class="ttl">
+								<ul>
+									<li>1 element</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 0 - 1</span>
+							<p>div</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-04.svg" alt="">
+							<div class="ttl">
+								<ul>
+									<li>2 elements</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 0 - 2</span>
+							<p>li &#62; ul</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-05.svg" alt="">
+							<div class="ttl">
+								<ul>
+									<li>9 elements</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 0 - 9</span>
+							<p>body div ... ul li p a</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-06.svg" alt="">
+							<div class="ttl">
+								<ul>
+									<li>1 class</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 1 - 0</span>
+							<p>.myclass</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-07.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>1 universal selector</li>
+									<li>1 class</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 1 - 0</span>
+							<p>*.myclass</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-07b.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>1 universal selector</li>
+									<li>1 attribute selector</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 1 - 0</span>
+							<p>*[type:checkbox]</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-08.svg" alt="">
+							<div class="ttl">
+								<ul>
+									<li>1 pseudo-class</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 1 - 0</span>
+							<p>:only-of-type</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-09.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>1 element</li>
+									<li>1 class</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 1 - 1</span>
+							<p>li.myclass</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-10.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>1 element</li>
+									<li>1 attribute</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 1 - 1</span>
+							<p>li[attr]</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-11.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>2 elements</li>
+									<li>1 pseudo-class</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 1 - 2</span>
+							<p>li:nth-of-type(3n)~li</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-12.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>2 elements</li>
+									<li>1 attribute</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 1 - 2</span>
+							<p>form input[type=email]</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-13.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>1 element</li>
+									<li>1 class</li>
+									<li>1 pseudo-class</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 2 - 1</span>
+							<p>li.class:nth-of-type(3n)</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-14.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>1 element</li>
+									<li>1 class</li>
+									<li>1 attribute</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 2 - 1</span>
+							<p>input[type]:not(.class)</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-15.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>10 class / attribute <span class="item">pseudo-class</span></li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">0 - 10 - 0</span>
+							<p>.cl:nth-child(odd) .chk[type]...</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-16.svg" alt="">
+							<div class="ttl">
+								<ul>
+									<li>1 ID selector</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">1 - 0 - 0</span>
+							<p>#myDiv</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-17.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>2 types</li>
+									<li>2 class / attribute</li>
+									<li>1 ID selector</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">1 - 2 - 2</span>
+							<p>#myDiv li.class a[href]</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-18.svg" alt="">
+							<div class="ttl ttl-2">
+								<ul>
+									<li>2 ID selectors</li>
+									<li>1 type selector</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">2 - 0 - 1</span>
+							<p>#divitis #myDiv a</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-19.svg" alt="">
+							<div class="ttl">
+								<ul>
+									<li>inline style</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">1 - 0 - 0 - 0</span>
+							<p>style=""</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+			<div class="box">
+				<div class="frame">
+					<a href="#">
+						<div class="img">
+							<img src="/web/20220318101613im_/https://cssspecificity.com/images/img-20.svg" alt="">
+							<div class="ttl">
+								<ul>
+									<li>!important</li>
+								</ul>
+							</div>
+							<div class="mask"></div>
+						</div>
+						<div class="desc">
+							<span class="value">1 - 0 - 0 - 0 - 0</span>
+							<p>!important</p>
+						</div>
+					</a>
+				</div><!-- frame -->
+			</div><!-- box -->
+		</div><!-- container -->
+		<footer>
+			<div class="holder">
+			</div><!-- holder -->
+		</footer><!-- footer -->
+	</div><!-- wrapper -->
+</article>
