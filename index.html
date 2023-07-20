@@ -49,7 +49,7 @@ header p { justify-content: end; flex: 0 1; padding: 1em; min-width: fit-content
 figure { width: 19vw; min-width: 200px; max-width: 250px; position: relative; margin: 0 2vw calc(15px + 1em); padding: 0; }
 figure img { border: 1px solid black; position: relative; }
 figure figcaption { position: absolute; left: -4px; top: -4px; padding: 5px; background: black; color: white; font-size: 12px; font-weight: bold; box-shadow: -1px -1px 0 white, -2px -2px 0 black; line-height: 1; }
-figure figcaption.multiline { top: -12px; }
+figure figcaption:has(> br) { top: -12px; }
 figure samp { font-size: 11px; float: left; }
 figure samp + samp { float: right; }
 
@@ -79,6 +79,13 @@ footer dd { flex: 1 0; margin: 0; margin-left: 10px; line-height: 1.4; padding-t
 	h1 a:hover, h1 a:focus { color: white; }
 	h3 { background-color: black; box-shadow: -1px -1px 0 white, -2px -2px 0 black; }
 	hr::after { opacity: 0.75; filter: invert; }
+}
+
+@media print {
+	figure {
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
 }
 </style>
 
@@ -127,14 +134,14 @@ footer dd { flex: 1 0; margin: 0; margin-left: 10px; line-height: 1.4; padding-t
 		
 		<figure>
 			<img src=img/universal-class.svg alt="1 universal selector, 1 class">
-			<figcaption class=multiline>1 universal selector<br>1 class</figcaption>
+			<figcaption>1 universal selector<br>1 class</figcaption>
 			<samp>*.missing-key</samp>
 			<samp>0–1–0</samp>
 		</figure>
 		
 		<figure>
 			<img src=img/universal-attribute.svg alt="1 universal selector, 1 attribute selector">
-			<figcaption class=multiline>1 universal selector<br>1 attribute selector</figcaption>
+			<figcaption>1 universal selector<br>1 attribute selector</figcaption>
 			<samp>*[type:checkbox]</samp>
 			<samp>0–1–0</samp>
 		</figure>
@@ -148,21 +155,21 @@ footer dd { flex: 1 0; margin: 0; margin-left: 10px; line-height: 1.4; padding-t
 		
 		<figure>
 			<img src=img/element-class.svg alt="1 element, 1 clacss">
-			<figcaption class=multiline>1 element<br>1 class</figcaption>
+			<figcaption>1 element<br>1 class</figcaption>
 			<samp>li.myclass</samp>
 			<samp>0–1–1</samp>
 		</figure>
 		
 		<figure>
 			<img src=img/element-attribute.svg alt="1 element, 1 attribute">
-			<figcaption class=multiline>1 element<br>1 attribute</figcaption>
+			<figcaption>1 element<br>1 attribute</figcaption>
 			<samp>li[attr]</samp>
 			<samp>0–1–1</samp>
 		</figure>
 		
 		<figure>
 			<img src=img/elements-pseudo.svg alt="2 elements, 1 pseudo-class">
-			<figcaption class=multiline>2 elements<br>1 pseudo-class</figcaption>
+			<figcaption>2 elements<br>1 pseudo-class</figcaption>
 			<samp>li:nth-of-type(3n)~li</samp>
 			<samp>0–1–2</samp>
 		</figure>
