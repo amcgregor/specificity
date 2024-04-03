@@ -100,7 +100,7 @@ footer dd { flex: 1 0; margin: 0; margin-left: 10px; line-height: 1.4; padding-t
 	<header>
 		<h1><a href="/">CSS<br>Specificity</a></h1>
 		<p>with icons inspired<br>by <a href="https://www.imdb.com/name/nm0000040/?ref_=tt_ov_dr">Stanley Kubrick</a>'s<br><a href="https://www.imdb.com/title/tt0081505/" target="_blank">“The Shining”</a></p>
-		<img src=img/typewriter.svg height=100 alt="The typewriter from the movie, with 'all work and no play make Jack a dull boy' written across the page several times, progressively more unhinged.">
+		<img src=img/typewriter.svg height=100 alt="The typewriter from the movie, with 'all work and no play make Jack a dull boy' written across the page several times, progressively more unhinged." title="All work and no play makes Jack a dull boy.">
 	</header>
 	
 	<section id=selectors>
@@ -276,7 +276,7 @@ footer dd { flex: 1 0; margin: 0; margin-left: 10px; line-height: 1.4; padding-t
 				</div>
 				<div>
 					<dt><samp>:not(x)</samp>
-					<dd>The <a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:not target=_blank>negation selector</a> has no value, but the argument passed increases specificity.
+					<dd>The <a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:not target=_blank>negation selector</a> has no value of its own; it has the specificity of the selector argument, <em>x</em>, passed in.
 				</div>
 			</ul>
 		</section>
@@ -291,7 +291,7 @@ footer dd { flex: 1 0; margin: 0; margin-left: 10px; line-height: 1.4; padding-t
 			<li>Modernized by <a href="https://marrow.haus/@alice">Alice Bevan-McGregor</a>
 			<li>From a Specificity Outlined by <a href="https://twitter.com/@estellevw">Estelle Weyl</a></li>
 			<br>
-			<li>This page will always remain analytics and tracking-free and does not utilize JavaScript.
+			<li>This page will always remain analytics and tracking-free, and does not utilize JavaScript.
 		</ul>
 	</footer>
 </article>
